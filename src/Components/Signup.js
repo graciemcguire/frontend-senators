@@ -10,13 +10,17 @@ const initialState = {
   password: ''
 };
 
-function Signup() {
+function Signup(props) {
+  console.log(props);
   const dispatch = useDispatch();
   const [form, setForm] = useState(initialState);
+
   const submitHandler = e => {
     e.preventDefault();
     dispatch(userActions.signUpFetch(form));
+    props.history.push('/main')
   };
+
 
   return (
     <div className="App-header">

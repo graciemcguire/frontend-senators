@@ -7,7 +7,9 @@ import senatorsActions from '../Redux/senatorActions';
 function MainContainer() {
   const dispatch = useDispatch();
   const senators = useSelector(state => state.senators);
+
   const [message, setMessage] = useState('S W I P E !');
+
   const onSwipeLeft = senator => {
     console.log(senator, 'I was swiped left.');
     dispatch(senatorsActions.handleCreateRating(senator.id, 'joke'));
@@ -19,6 +21,19 @@ function MainContainer() {
     setMessage('W O K E !');
   };
 
+
+  const shuffle = senators => {
+    let i = 0
+    let j = 0
+    let temp = null
+    for (i = senators.length - 1; i > 0; i -= 1) {
+      let j = Math.floor(Math.random() * (i + 1))
+      temp = senators[i]
+      senators[i] = senators[j]
+      senators[j] = temp
+    }
+  }
+
   const renderPage = () => {
     let titleStyle = {
       textAlign: 'center',
@@ -28,8 +43,25 @@ function MainContainer() {
       color: '#00293C',
       display: 'inline-block'
     };
+
     if (senators.length) {
-      return senators.map(senator => {
+
+      function shuffle(senators) {
+        let currentIndex = senators.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          temporaryValue = senators[currentIndex];
+          senators[currentIndex] = senators[randomIndex];
+          senators[randomIndex] = temporaryValue;
+        }
+        return senators;
+      }
+
+      return shuffle(senators).map(senator => {
         return (
           <Card
             style={{ backgroundColor: '#F1F3CE' }}

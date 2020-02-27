@@ -1,4 +1,4 @@
-const BASE_URL = 'http://woke-or-joke-backend.herokuapp.com/';
+const BASE_URL = 'http://localhost:3001';
 const USERS_URL = BASE_URL + '/users';
 const SENATORS_URL = BASE_URL + '/senators';
 const LOGIN_URL = BASE_URL + '/login';
