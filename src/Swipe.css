@@ -1,0 +1,287 @@
+.App {
+  text-align: center;
+  background-color: #00293C;
+}
+
+.App-header {
+  background-color: #00293C;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.button:hover {
+  background-color: #F1F3CE;
+  color: #00293C;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.button {
+  color: #F1F3CE;
+  background-color: #00293C;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 22px;
+}
+
+.button-reverse {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #F1F3CE;
+  color: #00293C;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.button-reverse:hover {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #F1F3CE;
+  background-color: #00293C;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 22px;
+}
+
+.main-buttons {
+  justify-content: center;
+  /* margin: 50px; */
+}
+
+.logo-main {
+  justify-content: center;
+  width: 800px;
+}
+
+.logo-small {
+  width: 600px;
+}
+
+.logo-nav {
+  width: 300px;
+}
+
+.senator-grid {
+  background-color: #00293C;
+  color: #F1F3CE;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+}
+
+#root {
+  background-color: #00293C;
+  color: #F1F3CE;
+}
+
+.title {
+  align-items: center;
+  padding-top: 20px;
+}
+
+.senator-thumbnail-gop {
+  justify-content: center;
+  border: double;
+  margin: 20px 20px 20px;
+  text-align: center;
+}
+
+.senator-thumbnail-dem {
+  justify-content: center;
+  border: double;
+  margin: 20px 20px 20px;
+  text-align: center;
+}
+
+.senator-thumbnail-gop:hover {
+  background-color: #F62A00;
+}
+
+.senator-thumbnail-dem:hover {
+  background-color: #1E656D;
+}
+
+.thumbnail-images {
+  justify-content: center;
+  width: 80%;
+  padding-top: 40px;
+}
+
+.senator-modal-gop {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
+  border: solid;
+  margin: 20px 20px 20px;
+  text-align: center;
+  background-color: #F62A00;
+  border-color: #F1F3CE
+}
+
+.senator-modal-dem {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
+  border: solid;
+  margin: 20px 20px 20px;
+  text-align: center;
+  background-color: #1E656D;
+  border-color: #F1F3CE
+}
+
+.modal-images {
+  justify-content: center;
+  width: 80%;
+  padding-top: 40px;
+}
+
+.popup-content{
+  background-color: #F1F3CE
+}
+
+.senator-card-dem {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
+  border: solid;
+  margin: 20px 20px 20px;
+  text-align: center;
+  background-color: #1E656D;
+  border-color: #F1F3CE
+}
+
+.senator-card-gop {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
+  border: solid;
+  margin: 20px 20px 20px;
+  text-align: center;
+  background-color: #F62A00;
+  border-color: #F1F3CE
+}
+
+.senator-cards {
+  width:500px;
+  height: 500px;
+}
+
+.main {
+  background-color: #00293C;
+  color: #F1F3CE;
+}
+
+.nav-links {
+
+}
+
+.nav {
+  background-color: #00293C;
+  justify-content: right;
+  align-items: center;
+  height: 300px;
+
+  bottom-margin: 50%;
+  border-bottom: double;
+  border-color: #F1F3CE
+}
+
+.nav-logo {
+  align-items: center;
+  justify-content: left;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.input {
+  width: 100%;
+  background-color: #F1F3CE;
+  color: #00293C;
+  height: 30px;
+}
+
+.card-image {
+  margin-top: 50px;
+  width: 80%;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 16px);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.container .cards_container {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: center;
+  z-index: 1;
+}
+.container .cards_container .card_container {
+  display: inline-block;
+  width: 90vw;
+  max-width: 400px;
+  height: 70vh;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.container .cards_container .moving.card_container {
+  -webkit-transition: none;
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* colors =
+navy - #00293C
+blue - #1E656D
+ivory - #F1F3CE
+red - #F62A00 */
