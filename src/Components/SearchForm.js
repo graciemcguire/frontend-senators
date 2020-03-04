@@ -6,8 +6,8 @@ function SearchForm({ value, changeHandler }) {
       <input
         className="form"
         type="text"
-        value={value}
-        onChange={e => changeHandler(e.target.value)}
+        value={ value }
+        onChange={ e => changeHandler(e.target.value) }
         placeholder={'Search all senators...'}
       />
     </form>

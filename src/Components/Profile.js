@@ -40,7 +40,7 @@ function Profile() {
           <SearchForm changeHandler={setSearch} />
           <button
             className="button-reverse"
-            onClick={e => setClicked(!clicked)}
+            onClick={ e => setClicked(!clicked) }
           >
             {clicked ? 'Viewing Woke Senators' : 'Viewing Joke Senators'}
           </button>
@@ -48,7 +48,7 @@ function Profile() {
       </div>
 
       <div className="senator-grid">
-        {user.senators ? (
+        { user.senators ? (
           filteredSenators()
         ) : (
           <center>

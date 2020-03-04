@@ -11,12 +11,11 @@ function MainContainer() {
   const [message, setMessage] = useState('S W I P E !');
 
   const onSwipeLeft = senator => {
-    console.log(senator, 'I was swiped left.');
     dispatch(senatorsActions.handleCreateRating(senator.id, 'joke'));
     setMessage('J O K E !');
   };
+
   const onSwipeRight = senator => {
-    console.log(senator, 'I was swiped right.');
     dispatch(senatorsActions.handleCreateRating(senator.id, 'woke'));
     setMessage('W O K E !');
   };
@@ -85,7 +84,6 @@ function MainContainer() {
         );
       });
     } else {
-      console.log('elseeeee');
       return (
         <center>
           <h1>L O A D I N G . . .</h1>
@@ -93,31 +91,13 @@ function MainContainer() {
       );
     }
   };
-  let wrapperStyle = {
-    backgroundColor: '#00293C',
-    height: '80vh'
-  };
-
-  let containerStyle = {
-    backgroundColor: '00293C',
-    height: 'calc(100vh - 16px)'
-  };
-
-  let messageStyle = {
-    color: 'white',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: '2vw',
-    fontFamily: 'Sans-Serif',
-    color: '#F1F3CE'
-  };
 
   return (
     <>
       <Nav />
-      <div style={containerStyle}>
-        <CardWrapper style={wrapperStyle}>{renderPage()}</CardWrapper>
-        <div style={messageStyle}>{message}</div>
+      <div className='swipe-container'>
+        <CardWrapper className='swipe-wrapper'>{ renderPage() }</CardWrapper>
+        <div className='swipe-message'>{ message }</div>
       </div>
     </>
   );

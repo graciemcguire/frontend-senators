@@ -288,6 +288,29 @@ input {
   cursor: grabbing;
 }
 
+.swipe-container {
+  background-color: #00293C;
+  height: calc(100vh - 16px);
+}
+
+.swipe-wrapper {
+  background-color: #00293C;
+  height: 80vh;
+}
+
+.swipe-message {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2vw;
+  font-family: Sans-Serif;
+  color: #F1F3CE;
+  padding-bottom: 30px;
+  z-index: 5;
+}
+
+
+
 
 /* colors =
 navy - #00293C

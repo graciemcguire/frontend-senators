@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import userActions from '../Redux/userActions';
 import { Link, useHistory } from 'react-router-dom';
-// import { Redirect } from 'react-router';
 import wokeorjoke_v1 from '../wokeorjoke_v1.svg';
 
 function Login() {
+
   const history = useHistory();
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
+
   const initialState = {
     email: '',
     password: ''
   };
+
   const [form, setForm] = useState(initialState);
   // Submit
   const handleSubmit = e => {
@@ -20,11 +22,8 @@ function Login() {
     dispatch(userActions.loginFetch(form));
     setLoaded(!loaded);
     history.push('/main');
-
-    // // setTimeout(() => {
-    // //   history.push('/main');
-    // }, 200);
   };
+
   // render form
   const renderLoginForm = () => {
     return (
@@ -62,11 +61,12 @@ function Login() {
       </div>
     );
   };
+
   // RETURN
   return (
     <div className="App-header">
       <img className="logo-small" src={wokeorjoke_v1} alt="logo" />
-      {renderLoginForm()}
+      { renderLoginForm() }
     </div>
   );
 }

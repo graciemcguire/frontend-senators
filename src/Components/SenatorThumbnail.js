@@ -17,15 +17,15 @@ function SenatorThumbnail({ senator }) {
     if (senator) {
 
       return (
-        <div className={renderPartyColor()}>
+        <div className={ renderPartyColor() }>
           <img
             className="thumbnail-images"
-            src={senator.image}
-            alt={senator.name}
+            src={ senator.image }
+            alt={ senator.name }
           />
-          <h2>{senator.name}</h2>
+          <h2>{ senator.name }</h2>
           <h3>
-            {senator.party} - {senator.state}
+            { senator.party } - { senator.state }
           </h3>
         </div>
       );
@@ -41,22 +41,22 @@ function SenatorThumbnail({ senator }) {
 
   const renderModals = () => {
     return (
-      <div className={renderModalPartyColor()}>
-        <img className="modal-images" src={senator.image} alt={senator.name} />
-        <h2>{senator.name}</h2>
+      <div className={ renderModalPartyColor() }>
+        <img className="modal-images" src={ senator.image } alt={ senator.name } />
+        <h2>{ senator.name }</h2>
         <h3>
-          {senator.party} - {senator.state}
+          { senator.party } - { senator.state }
         </h3>
         <h3>Details:</h3>
         <h3>
-          <a href={senator.contact} target="_blank" rel="noopener noreferrer">
-            Contact {senator.name}
+          <a href={ senator.contact } target="_blank" rel="noopener noreferrer">
+            Contact { senator.name }
           </a>{' '}
         </h3>
-        <button value="woke" onClick={e => wokeOrJokeBtn(e)}>
+        <button value="woke" onClick={ e => wokeOrJokeBtn(e) }>
           Woke?
         </button>
-        <button value="joke" onClick={e => wokeOrJokeBtn(e)}>
+        <button value="joke" onClick={ e => wokeOrJokeBtn(e) }>
           Joke?
         </button>
       </div>
@@ -64,8 +64,8 @@ function SenatorThumbnail({ senator }) {
   };
 
   return (
-    <Popup trigger={renderUserSenators()} modal position="right center">
-      <div className="modal">{renderModals()}</div>
+    <Popup trigger={ renderUserSenators() } modal position="right center">
+      <div className="modal">{ renderModals() }</div>
     </Popup>
   );
 }

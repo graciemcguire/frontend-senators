@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import wokeorjoke_v1 from '../wokeorjoke_v1.svg';
 
 function Nav() {
+
   const profileLink = () => {
     if (localStorage.getItem('token')) {
       return (
@@ -39,7 +40,7 @@ function Nav() {
         <Link className="button nav-links" to={'/senators'}>
           All Senators
         </Link>
-        {profileLink()}
+        { profileLink() }
       </div>
     </>
   );

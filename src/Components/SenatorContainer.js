@@ -11,14 +11,14 @@ function SenatorContainer() {
   const filteredSenators = () => {
     if (searchTerm === '') {
       return senators.map(senator => (
-        <SenatorThumbnail key={senator.id} senator={senator} />
+        <SenatorThumbnail key={ senator.id } senator={ senator } />
       ));
     } else {
       let filtered = senators.filter(senator =>
         senator.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       return filtered.map(senator => (
-        <SenatorThumbnail key={senator.id} senator={senator} />
+        <SenatorThumbnail key={ senator.id } senator={ senator } />
       ));
     }
   };
@@ -31,12 +31,12 @@ function SenatorContainer() {
           <h1>2019 US Senators</h1>
         </center>
         <center>
-          <SearchForm changeHandler={setSearchTerm} />
+          <SearchForm changeHandler={ setSearchTerm } />
         </center>
       </div>
 
       <div className="senator-grid">
-        {senators ? filteredSenators() : console.log(senators)}
+        { senators ? filteredSenators() : console.log(senators) }
       </div>
     </>
   );
